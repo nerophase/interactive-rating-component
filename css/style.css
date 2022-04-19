@@ -1,0 +1,196 @@
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+
+- Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+- Weights: 400, 700 
+
+-font size: 15px
+*/
+
+:root {
+	/* Primary Color */
+	--orange: hsl(25, 97%, 53%);
+
+	/* Neutral Colors */
+	--white: hsl(0, 0%, 100%);
+	--lightGrey: hsl(217, 12%, 63%);
+	--mediumGrey: hsl(216, 12%, 54%);
+	--mediumBlue: hsl(213, 19%, 22%);
+	--darkBlue: hsl(213, 19%, 18%);
+	--veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Overpass', sans-serif;
+	color: var(--white);
+	user-select: none;
+}
+
+body {
+	background-color: #111;
+}
+
+main {
+	height: 95vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+p {
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--mediumGrey);
+}
+
+h1 {
+	margin: 20px 0 10px;
+}
+
+.card {
+	padding: 20px;
+	width: 360px;
+	height: auto;
+	border-radius: 20px;
+	background-color: var(--darkBlue);
+	background: radial-gradient(
+		circle at top,
+		var(--darkBlue) 0%,
+		var(--veryDarkBlue) 100%
+	);
+}
+
+.circle-container {
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--mediumBlue);
+	transition: all 0.3s;
+}
+
+.circle-container__number {
+	border: none;
+	cursor: pointer;
+	color: var(--mediumGrey);
+	font-weight: 700;
+}
+
+.circle-container__number:hover:not(.active) {
+	background-color: var(--lightGrey);
+	color: var(--white);
+}
+
+.circle-container span {
+	color: inherit;
+}
+
+#star-img {
+	width: 15px;
+	height: 15px;
+}
+
+.ratings {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0 30px 0;
+}
+
+.active {
+	background-color: var(--orange);
+	color: var(--white);
+}
+
+footer {
+	height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.submit {
+	width: 100%;
+	background-color: var(--orange);
+	color: var(--white);
+	border-radius: 30px;
+	border: none;
+	padding: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 0.3s;
+}
+
+.submit:hover {
+	cursor: pointer;
+	background-color: var(--white);
+	color: var(--orange);
+}
+
+.submit h3 {
+	color: inherit;
+}
+
+.message {
+	margin: 20px 0;
+	width: 100%;
+	display: none;
+	justify-content: center;
+}
+
+.message h2 {
+	color: #dc3545;
+}
+
+.d-none {
+	display: none;
+}
+
+.d-flex {
+	display: flex;
+}
+
+#thank-card p {
+	text-align: center;
+}
+
+#thank-card figure {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0 30px;
+}
+
+.rate-message-box {
+	display: flex;
+	justify-content: center;
+}
+
+#rate-message {
+	padding: 10px 15px;
+	background-color: var(--darkBlue);
+	border-radius: 20px;
+	color: var(--orange);
+}
+
+#thank-message {
+	text-align: center;
+}
+
+@media (max-width: 375px) {
+	.card {
+		width: 90%;
+	}
+}
+
+/* @media (min-width: 375px) {
+	.card {
+		width: 360px;
+	}
+} */

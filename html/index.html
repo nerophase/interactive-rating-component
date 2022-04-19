@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../images/favicon-32x32.png"
+		/>
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<title>Frontend Mentor | Interactive rating component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 15px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="card" id="rating-card">
+				<!-- Rating state start -->
+				<div class="circle-container">
+					<img id="star-img" src="../images/icon-star.svg" alt="star icon" />
+				</div>
+				<h1>How did we do?</h1>
+
+				<p>
+					Please let us know how we did with your support request. All feedback
+					is appreciated to help us improve our offering!
+				</p>
+
+				<div class="ratings">
+					<button
+						class="circle-container circle-container__number"
+						id="rating-1"
+					>
+						<span class="sp">1</span>
+					</button>
+					<button
+						class="circle-container circle-container__number"
+						id="rating-2"
+					>
+						<span>2</span>
+					</button>
+					<button
+						class="circle-container circle-container__number"
+						id="rating-3"
+					>
+						<span>3</span>
+					</button>
+					<button
+						class="circle-container circle-container__number"
+						id="rating-4"
+					>
+						<span>4</span>
+					</button>
+					<button
+						class="circle-container circle-container__number"
+						id="rating-5"
+					>
+						<span>5</span>
+					</button>
+				</div>
+
+				<div class="message">
+					<h2>Please select a rating</h2>
+				</div>
+
+				<button class="submit"><h3>Submit</h3></button>
+
+				<!-- Rating state end -->
+			</div>
+
+			<div class="card d-none" id="thank-card">
+				<!-- Thank you state start -->
+				<figure>
+					<img src="../images/illustration-thank-you.svg" alt="thank you" />
+				</figure>
+
+				<div class="rate-message-box">
+					<span id="rate-message">
+						You selected
+						<!-- Add rating here -->
+						out of 5
+					</span>
+				</div>
+				<h1 id="thank-message">Thank you!</h1>
+				<p id="thank-details">
+					We appreciate you taking the time to give a rating. If you ever need
+					more support, don’t hesitate to get in touch!
+				</p>
+
+				<!-- Thank you state end -->
+			</div>
+		</main>
+		<footer>
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="https://twitter.com/KaitoZXX">Kaito</a>
+			</div>
+		</footer>
+
+		<script src="../js/main.js"></script>
+	</body>
+</html>
